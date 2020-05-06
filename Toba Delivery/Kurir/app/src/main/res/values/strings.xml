@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TobaKurir</string>
+    <string name="prefLoginState">loginstate</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="action_settings">Settings</string>
+</resources>
