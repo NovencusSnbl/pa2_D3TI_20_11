@@ -66,11 +66,29 @@ CREATE TABLE `kurir` (
   `fotoSTNK` varchar(225) DEFAULT NULL,
   `status` int(1) DEFAULT '0',
   PRIMARY KEY (`id_kurir`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `kurir` */
 
-insert  into `kurir`(`id_kurir`,`nama`,`email`,`password`,`gender`,`fotoDiri`,`alamat`,`fotoSIM`,`fotoSTNK`,`status`) values (1,'$nama','0','$password','$gender','$fotoDiri','$alamat','$fotoSIM','$fotoSTNK',1),(2,'maydi','0','123456','Laki - lak','5eaeec5b9ccef.png','porsea','5eaeec5b9cea0.png','5eaeec5b9d025.gif',0),(3,'maydi','2147483647','1234567','Laki - lak','5eaef0b48d08f.jfif','porsea','5eaef0b48d31a.jpg','5eaef0b48d56e.png',0),(4,'maydi','2147483647','123','Laki - lak','5eaef0cc33e88.png','porsea','5eaef0cc3409f.png','5eaef0cc34242.png',0),(5,'maydi','s@gmail.com','123','Laki - lak','5eaef1993730a.jpg','porsea','5eaef19937543.png','5eaef1993774d.png',0),(6,'maydi','novencussinambela00@gmail.com','123456','Laki-laki','5eaef89346c5d.jpg','porsea','5eaef89346e9e.jpg','5eaef8934700c.jpg',0);
+insert  into `kurir`(`id_kurir`,`nama`,`email`,`password`,`gender`,`fotoDiri`,`alamat`,`fotoSIM`,`fotoSTNK`,`status`) values (5,'maydi','s@gmail.com','123','Laki - lak','5eaef1993730a.jpg','porsea','5eaef19937543.png','5eaef1993774d.png',1),(6,'maydi','novencussinambela00@gmail.com','123456','Laki-laki','5eaef89346c5d.jpg','porsea','5eaef89346e9e.jpg','5eaef8934700c.jpg',0),(7,'saya','saya@gmail.com','suka2saya','Laki-laki','5eb260cb13b39.png','porsea','5eb260cb14124.png','5eb260cb14685.png',0);
+
+/*Table structure for table `produk` */
+
+DROP TABLE IF EXISTS `produk`;
+
+CREATE TABLE `produk` (
+  `id_produk` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_produk` varchar(20) DEFAULT NULL,
+  `harga` float DEFAULT NULL,
+  `gambar` varchar(225) DEFAULT NULL,
+  `nama_toko` varchar(50) DEFAULT NULL,
+  `alamat` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`id_produk`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+/*Data for the table `produk` */
+
+insert  into `produk`(`id_produk`,`nama_produk`,`harga`,`gambar`,`nama_toko`,`alamat`) values (1,'$namaProduk',0,'$gambarProduk','$namaToko','$alamat'),(2,'Indomie',25000,'5eb417f98c919.jfif','Toko sabar','jln soposurung ,balige');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
