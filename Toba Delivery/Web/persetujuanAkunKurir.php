@@ -61,7 +61,7 @@ tr:hover {background-color:#f5f5f5;}
 
 	</style>
 </head>
-<body style="background-image: url(image/loker2.jpg);background-size: cover;color: white;"> 
+<body style="background-image: url(image/g3.jpg);background-size: cover;color: white;"> 
 
 	<table border="0">
 		<tr>
@@ -70,11 +70,11 @@ tr:hover {background-color:#f5f5f5;}
 			<th>Email</th>
 			<th>Gender</th>
 			<th>Foto Diri</th>
-			<th>Gender</th>
 			<th>Alamat</th>
 			<th>SIM</th>
 			<th>KTP</th>
-			<th></th>
+			<th>Status</th>
+			<th>   </th>
 		</tr>
 		<?php foreach ($costumer as $row):?> 
 	

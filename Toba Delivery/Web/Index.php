@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["login"])) {
+   header("Location: LoginAdmin.php");
+   exit;
+ }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,15 +19,15 @@
       </div>
       <ul>
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Editing</a></li>
-        <li><a href="#">Pentesting</a></li>
-        <li><a href="#">Website</a></li>
+        <li><a href="persetujuanAkunKurir.php">Approve Kurir</a></li>
+        <li><a href="persetujuanAkun.php">Approve Costumer</a></li>
+        <li><a href="tambahProduk.php">Tambah Produk</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
     <div class="button">
-      <center><a href="LoginAdmin.php" class="btn1">MASUK SEBAGAI ADMIN</a></center>
+      
     </div>
     <div class="title">
       <h1>TOBA DELIVERY</h1>

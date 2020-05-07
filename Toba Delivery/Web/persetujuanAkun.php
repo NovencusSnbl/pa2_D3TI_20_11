@@ -61,7 +61,7 @@ tr:hover {background-color:#f5f5f5;}
 
 	</style>
 </head>
-<body style="background-image: url(image/loker2.jpg);background-size: cover;color: white;"> 
+<body style="background-image: url(image/g2.jpg);background-size: cover;color: white;"> 
 
 	<table border="0">
 		<tr>

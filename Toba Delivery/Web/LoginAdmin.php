@@ -17,7 +17,7 @@ require 'function.php';
 		if (password_verify($password,$row["passwordA"])) {
 			//set session
 			$_SESSION["login"] = true;
-				header("Location: persetujuanAkun.php");
+				header("Location: Index.php");
 				// header("Location : awal.php");
 				exit;
 			}
@@ -48,7 +48,7 @@ require 'function.php';
     	/* SIGNIN STYLE */
 		body {
 			color: #999;
-			background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(image/loker2.jpg);
+			background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(image/g2.jpg);
 			font-family: 'Fredoka One', cursive;
 			background-size: cover;
 		}

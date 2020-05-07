@@ -1,14 +1,19 @@
  <?php
+session_start();
+if (!isset($_SESSION["login"])) {
+   header("Location: LoginAdmin.php");
+   exit;
+ }
  require'function.php';
- $loker = query("SELECT * from kurir");
+ $loker = query("SELECT * from produk");
  if(isset($_POST["submit"])) {
 
  //cek apakah data berhasil dikirm atau tidak
- if(registrasiKurir($_POST)>0) {
+ if(tambahProduk($_POST)>0) {
  	echo "
  	<script>
  	alert('Data berhasil register');
- 	document.location.href = 'registerKurir.php'
+ 	document.location.href = 'Index.php'
  	</script>
  	";
  }
@@ -16,7 +21,7 @@
  	echo "
  	<script>
  	alert('Data Gagal register');
- 	document.location.href = 'registerKurir.php'
+ 	document.location.href = 'tambahProduk.php'
  	</script>
  	";
  }
@@ -117,51 +122,35 @@ span{
 } 
   </style>
 <center>
-<body style="background-image:url(image/loker2.jpg);background-size: cover;">
+<body style="background-image:url(image/g2.jpg);background-size: cover;">
 	<br>
 	<br>
 	<br>
 	<br>
 
 	<form action="" method="post" enctype="multipart/form-data">
-		<h1>Daftar Akun Anda</h1>
+		<h1>Tambah Produk</h1>
 		<table>			
 			
 			<div class="container">
-	    <label><b>Nama lengkap</b></label>
-	    <input type="text" name="nama" placeholder="masukkan nama lengkap anda" required><br>
-      <label><b>Email</b></label>
-      <input type="text" name="email" placeholder="masukkan email anda" required><br>
-      <label><b>Password</b></label>
-      <input type="password" name="password" placeholder="masukkan password anda" required><br>
-	    <br><label><b>Jenis Kelamin</b></label><br>
-	    <select name="gender" style="width: 460px;height: 40px;"><br>
-	            <option>Laki-laki</option>
-	            <option>Perempuan</option>
-	          </select><br>
-      <label><b>Foto Diri (dibawah 4 MB)</b></label><br>
-      <br><br>
+	    <label><b>Nama Produk</b></label>
+	    <input type="text" name="produk" placeholder="masukkan nama produk" required><br>
+      <label><b>Harga</b></label><br>
+      <input type="number" name="harga" placeholder="    masukkan harga produk" required style="width:460px;height: 40px"><br><br>
+      <label><b>Gambar Produk (dibawah 4 MB)</b></label><br>
       <fieldset style="background-color: white">
       <input type="file" name="gambar" required style="color: black;padding-top: 6px;padding-bottom: 6px;">
       </fieldset>
+      <br><label><b>Nama toko</b></label>
+      <input type="text" placeholder="masukkan nama toko" name="toko" required>
 	    <br><label><b>alamat</b></label>
-	    <input type="text" placeholder="masukkan alamat anda" name="alamat" required>
+	    <input type="text" placeholder="masukkan alamat Toko" name="alamat" required>
 	    <br><br>
-	    <label><b>Foto SIM</b></label><br>
-	    <fieldset style="background-color: white">
-	    <input type="file" name="SIM" required style="color: black;padding-top: 6px;padding-bottom: 6px;">
-	    </fieldset>
-      <br><br>
-      <label><b>Foto STNK</b></label><br>
-      <fieldset style="background-color: white">
-      <input type="file" name="STNK" required style="color: black;padding-top: 6px;padding-bottom: 6px;">
-      </fieldset>
-	        
-	    <input type="hidden" name="status">
+	   
   </div>
 		</table>
 		<br>
-		<button type="submit" name="submit" style="width: 93%">Tambahkan data</button>
+		<button type="submit" name="submit" style="width: 93%">Tambahkan Produk</button>
 	</form>
 </body>
 </center>
