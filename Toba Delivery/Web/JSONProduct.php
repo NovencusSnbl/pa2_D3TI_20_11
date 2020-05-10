@@ -1,6 +1,5 @@
-<?php
-include 'koneksi.php';
-
+<?php 
+ 
 	/*
 	* Created by Belal Khan
 	* website: www.simplifiedcoding.net 
@@ -11,7 +10,7 @@ include 'koneksi.php';
 	define('DB_HOST', 'localhost');
 	define('DB_USER', 'root');
 	define('DB_PASS', '');
-	define('DB_NAME', 'pa2');
+	define('DB_NAME', 'coba1');
 	
 	//connecting to database and getting the connection object
 	$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -23,29 +22,27 @@ include 'koneksi.php';
 	}
 	
 	//creating a query
-	$stmt = $conn->prepare("SELECT id_produk, nama_produk, alamat, nama_toko, harga, gambar FROM produk;");
+	$stmt = $conn->prepare("SELECT id, title, shortdesc, rating, price, image FROM products;");
 	
 	//executing the query 
 	$stmt->execute();
 	
 	//binding results to the query 
-	$stmt->bind_result($id_produk, $nama_produk, $alamat, $nama_toko, $harga, $gambar);
+	$stmt->bind_result($id, $title, $shortdesc, $rating, $price, $image);
 	
 	$products = array(); 
 	
 	//traversing through all the result 
 	while($stmt->fetch()){
 		$temp = array();
-		$temp['id_produk'] = $id_produk; 
-		$temp['nama_produk'] = $nama_produk; 
-		$temp['alamat'] = $alamat; 
-		$temp['nama_toko'] = $nama_toko; 
-		$temp['harga'] = $harga; 
-		$temp['gambar'] = $gambar; 
+		$temp['id'] = $id; 
+		$temp['title'] = $title; 
+		$temp['shortdesc'] = $shortdesc; 
+		$temp['rating'] = $rating; 
+		$temp['price'] = $price; 
+		$temp['image'] = $image; 
 		array_push($products, $temp);
 	}
 	
 	//displaying the result in json format 
 	echo json_encode($products);
-
-?>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="latin1" collation="latin1_swedish_ci">pa2</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="pemesanan" view="colnames">
+<left>138</left>
+<top>253</top>
+<width>153</width>
+<height>231</height>
+<sql_create_table>CREATE TABLE `pemesanan` (
+  `idpemesanan` int(11) NOT NULL AUTO_INCREMENT,
+  `waktu_pemesanan` datetime DEFAULT NULL,
+  `waktu_sampai` datetime DEFAULT NULL,
+  `asal` blob,
+  `tujuan` blob,
+  `status` int(11) DEFAULT '0',
+  `idkurir` int(11) DEFAULT '0',
+  `idcostumer` int(11) DEFAULT NULL,
+  `idproduk` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idpemesanan`),
+  KEY `FK_pemesanan` (`idkurir`),
+  KEY `FK_costumer` (`idcostumer`),
+  KEY `FK_pemesanan_produk` (`idproduk`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="kurir" view="colnames">
+<left>498</left>
+<top>357</top>
+<width>100</width>
+<height>248</height>
+<sql_create_table>CREATE TABLE `kurir` (
+  `id_kurir` int(10) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `fotoDiri` varchar(225) DEFAULT NULL,
+  `alamat` varchar(225) DEFAULT NULL,
+  `fotoSIM` varchar(225) DEFAULT NULL,
+  `fotoSTNK` varchar(225) DEFAULT NULL,
+  `status` int(1) DEFAULT '0',
+  PRIMARY KEY (`id_kurir`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="costumer" view="colnames">
+<left>662</left>
+<top>227</top>
+<width>116</width>
+<height>197</height>
+<sql_create_table>CREATE TABLE `costumer` (
+  `id_costumer` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `PASSWORD` varchar(12) DEFAULT NULL,
+  `mobile` blob,
+  `gender` blob,
+  `status` int(1) DEFAULT '0',
+  PRIMARY KEY (`id_costumer`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="produk" view="colnames">
+<left>383</left>
+<top>551</top>
+<width>125</width>
+<height>180</height>
+<sql_create_table>CREATE TABLE `produk` (
+  `id_produk` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_produk` varchar(20) DEFAULT NULL,
+  `harga` float DEFAULT NULL,
+  `gambar` varchar(225) DEFAULT NULL,
+  `nama_toko` varchar(50) DEFAULT NULL,
+  `alamat` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`id_produk`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

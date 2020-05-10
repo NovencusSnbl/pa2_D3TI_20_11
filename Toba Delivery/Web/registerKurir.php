@@ -117,7 +117,7 @@ span{
 } 
   </style>
 <center>
-<body style="background-image:url(image/loker2.jpg);background-size: cover;">
+<body style="background-image:url(image/g2.jpg);background-size: cover;">
 	<br>
 	<br>
 	<br>

@@ -6,15 +6,15 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Place Auto Complete"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Maps Direction"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ojek Activity"/>
+        android:textAllCaps="false"
+        android:text="Daftar Produk"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_margin="5dp"
+        android:onClick="pesan"
+        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -36,15 +36,15 @@ th, td {
   padding: 8px;
 }
 td{
-	color: black;
+	color: white;
 }
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){background-color: #}
 
 th {
   background-color: #4CAF50;
   color: white;
 }
-tr:hover {background-color:#f5f5f5;}
+tr:hover {background-color:#1E90FF;}
 .btn {
   border: none;
   color: white;

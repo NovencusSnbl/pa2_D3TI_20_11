@@ -71,7 +71,7 @@ require 'function.php';
 			margin: -30px -30px 20px;
 			padding: 30px 30px 10px;
 			text-align: center;
-			background: #e67e22;
+			background: #4169E1;
 			border-bottom: 1px solid #eee;
 			color: #fff;
 		}
@@ -143,7 +143,7 @@ require 'function.php';
       </div>
 	<h1></h1>
 	<?php if (isset($error) == true) :?>
-		<p style="color: white; font-style: italic;"><fieldset style="background-color: hsl(0, 80%, 50%)"><center>Username atau password salah</center></fieldset></p>
+		<p style="color: white; font-style: italic;"><fieldset style="background-color: hsl(0, 80%, 50%);width: 100%;color: white"><center>Username atau password salah</center></fieldset></p>
 	<?php endif ; ?>
 	<div class="signin-form">
 
@@ -169,7 +169,7 @@ require 'function.php';
 		<tr>
 			<td></td>
 			<td></td>
-			<td><button type="submit" name="login" class="btn btn-primary btn-block btn-lg" placeholder="Password" autocomplete="off" style="margin-top: 20px;color: white;">Login</button></td>
+			<td><button type="submit" name="login" class="btn btn-primary btn-block btn-lg" placeholder="Password" autocomplete="off" style="margin-top: 20px;color: white;background-color: #4169E1">Login</button></td>
 		</tr>
 	</table>
 	</form>

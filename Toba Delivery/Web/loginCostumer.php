@@ -2,9 +2,10 @@
 	include 'koneksi.php';
 	$email = $_POST["email"];
 	$password = $_POST["password"];
-
-	// $email = "nvs@gmail.com";
-	// $password = "1234567";
+	// $email = "user02@gmail.com";
+	// $password = "suka2saya";
+	$idcostumer = "SELECT id_costumer FROM costumer WHERE email = '$email'";
+	 
 	$isValidEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
 	if ($con) {
 		if ($isValidEmail === 0) {
@@ -15,10 +16,10 @@
 			$usernameQuery = mysqli_query($con,$sqlCheckEmail); 
 			if(mysqli_num_rows($usernameQuery)>0){
 
-				$sqlLoginStatus = "SELECT * FROM costumer WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1";
+				$sqlLoginStatus = "SELECT * FROM costumer WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1 ";
 				$loginStatusQuery = mysqli_query($con,$sqlLoginStatus);
 				if (mysqli_num_rows($loginStatusQuery)>0) {
-					$sqlLogin = "SELECT * FROM costumer WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1";
+					$sqlLogin = "SELECT * FROM costumer WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1 ";
 					$loginQuery = mysqli_query($con,$sqlLogin);
 
 					if (mysqli_num_rows($loginQuery)>0) {
