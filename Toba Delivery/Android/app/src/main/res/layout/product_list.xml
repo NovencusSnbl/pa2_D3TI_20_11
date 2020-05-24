@@ -6,11 +6,10 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:background="@color/colorList"
+        android:layout_height="219dp"
         android:layout_marginBottom="10px"
-        >
+        android:background="@color/colorList"
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/imageView"
@@ -19,16 +18,29 @@
             android:padding="4dp" />
 
         <TextView
-            android:id="@+id/textViewTitle"
+            android:id="@+id/textViewID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/imageView"
-            android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
+            android:text="id"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:textColor="#000000"
             android:textSize="20dp"
+
             />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textViewShortDesc"
@@ -38,10 +50,10 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/imageView"
+            android:paddingRight="5dp"
             android:text="13.3 Inch, 256 GB"
-            android:textSize="19dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:paddingRight="5dp"/>
+            android:textSize="19dp" />
 
         <TextView
             android:id="@+id/textViewRating"
@@ -56,9 +68,8 @@
             android:paddingRight="15dp"
             android:text="4.7"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-            android:textStyle="bold"
             android:textSize="20dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewPrice"

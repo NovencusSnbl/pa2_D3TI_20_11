@@ -75,6 +75,7 @@ tr:hover {background-color:#1E90FF;}
 			<th>KTP</th>
 			<th>Status</th>
 			<th>   </th>
+			<th>   </th>
 		</tr>
 		<?php foreach ($costumer as $row):?> 
 	
@@ -100,9 +101,17 @@ tr:hover {background-color:#1E90FF;}
 			<td><?php
 			if ($row["status"] == 0) {
 			?>
-			<a href="persetujuanAkunKurirProses.php?id_kurir=<?= $row["id_kurir"]; ?>" onclick="return confirm('Apakah anda yakin?');"><button type="submit" name="ambil" class="btn danger" >Aprrove</button></a>		
+			<a href="persetujuanAkunKurirProses.php?id_kurir=<?= $row["id_kurir"]; ?>" onclick="return confirm('Apakah anda yakin?');"><button type="submit" name="ambil" class="btn danger" style="background-color: green" >Aprrove</button></a>		
 			<?php	}
+			else{
+				?>
+			<a href="nonaktifkanAkunKurir.php?id_kurir=<?= $row["id_kurir"]; ?>" onclick="return confirm('Apakah anda yakin?');"><button type="submit" name="ambil" class="btn danger" >Nonaktifkan</button></a>		
+			<?php	
+			}
 			?>
+			<td>
+				<a href="detailKurir.php?id_kurir=<?= $row["id_kurir"]; ?>" class="action2"><button class="btn danger" style="background-color: orange">Detail</button></a>
+			</td>
 		</tr>
 		
 	<?php endforeach ;?>

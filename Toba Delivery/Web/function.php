@@ -271,7 +271,7 @@ function uploadProduk(){
  		return false;
 	}
 //cek apakah yang di upload memang gambar
-	$ekstensiGambarValid=['jpg','jpeg','png','gif','jfif'];
+	$ekstensiGambarValid=['jpg','jpeg','png'];
 	$ekstensiGambar = explode('.', $namaFile);
 	$ekstensiGambar =strtolower(end($ekstensiGambar));
 
@@ -297,6 +297,13 @@ function uploadProduk(){
 	$namaFileBaru .= $ekstensiGambar;
 	move_uploaded_file($tmpName, 'img/Produk/'.$namaFileBaru);
 	return $namaFileBaru;
+}
+function nonaktifKurir($data){
+	global $conn;
+ 	$query="UPDATE kurir SET status = 0 WHERE id_kurir ='$data' ";
+	mysqli_query($conn,$query);
+
+ 	return mysqli_affected_rows($conn);
 }
 
 ?>	

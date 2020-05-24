@@ -18,17 +18,31 @@ global $conn;
   // Hasil: 20-01-2017 05:32:15
  $asal = $_POST["asal"];
  $tujuan = $_POST["tujuan"];
+ $idproduk = $_POST["idproduk"];
  // $asal = 'Porsea';
  // $tujuan = 'Laguboti';
+ // $idproduk = 1;
 
-	$query="INSERT INTO pemesanan VALUES('',now(),'','$asal','$tujuan','','','','')";
-				if (mysqli_query($conn,$query)) {
-					echo "Pesanan Berhasil";
+	$sqlCheckUsername = "SELECT * from produk WHERE id_produk LIKE '$idproduk'";
+
+			$usernameQuery = mysqli_query($conn,$sqlCheckUsername); 
+
+
+			if (mysqli_num_rows($usernameQuery) > 0) {
+				$sql_register = "INSERT INTO pemesanan VALUES('',now(),'','$asal','$tujuan','','','','$idproduk','')";
+
+				if (mysqli_query($conn,$sql_register)) {
+					echo "Sukses Memesan!";
 				}
 				else
 				{
-					echo "Pesanan Gagal";
+					echo "Gagal Memesan!";
 				}
+				
+			}
+			else{
+				echo "id produk yang dimaksud tidak ada!";
+			}
  
 
 ?>

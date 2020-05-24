@@ -16,7 +16,7 @@
 			$usernameQuery = mysqli_query($con,$sqlCheckEmail); 
 			if(mysqli_num_rows($usernameQuery)>0){
 
-				$sqlLoginStatus = "SELECT * FROM costumer WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1 ";
+				$sqlLoginStatus = "SELECT * FROM costumer WHERE email = '$email' AND STATUS = 1 ";
 				$loginStatusQuery = mysqli_query($con,$sqlLoginStatus);
 				if (mysqli_num_rows($loginStatusQuery)>0) {
 					$sqlLogin = "SELECT * FROM costumer WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1 ";

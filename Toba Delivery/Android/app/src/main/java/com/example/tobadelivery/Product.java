@@ -2,12 +2,12 @@ package com.example.tobadelivery;
 
 
 public class Product {
-    private int id_produk;
-    private String nama_produk;
-    private String alamat;
-    private String nama_toko;
-    private double harga;
-    private String gambar;
+     int id_produk;
+     String nama_produk;
+     String alamat;
+     String nama_toko;
+     double harga;
+     String gambar;
 
     public Product(int id_produk, String nama_produk, String alamat, String nama_toko, double harga, String gambar) {
         this.id_produk = id_produk;
@@ -16,6 +16,10 @@ public class Product {
         this.nama_toko = nama_toko;
         this.harga = harga;
         this.gambar = gambar;
+    }
+
+    public Product() {
+
     }
 
     public int getId_produk() {
