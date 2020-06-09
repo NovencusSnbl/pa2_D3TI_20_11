@@ -8,7 +8,7 @@
     cardview:cardCornerRadius="8dp"
     cardview:cardElevation="3dp"
     cardview:cardUseCompatPadding="true">
-    dwd
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -27,11 +27,9 @@
             android:layout_marginLeft="5dp"
             android:text="id produk"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="@color/cardview_light_background"
+            android:textColor="#FFFFFF"
             android:background="@color/colorPrimaryDark"
-            android:textSize="20dp"
-            android:layout_marginStart="5dp"
-            />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/title"

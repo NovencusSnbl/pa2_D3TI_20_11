@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString(getResources().getString(R.string.prefLoginState),"loggedout");
                     }
                     editor.apply();
-                    startActivity(new Intent(LoginActivity.this,MainActivity.class)) ;
+                    startActivity(new Intent(LoginActivity.this,TampilSemuaPemesanan.class)) ;
                     finish();
                 }
                 else {

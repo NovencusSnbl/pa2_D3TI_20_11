@@ -77,13 +77,11 @@ if (!isset($_SESSION["login"])) {
       <?php
         error_reporting(0);
 
-
-
 //
 
         $connect = mysqli_connect("localhost", "root", "", "pa2");
 
-        $query = "SELECT * FROM kurir WHERE status = 0 ORDER BY id_kurir ASC LIMIT 1";
+        $query = "SELECT * FROM kurir WHERE status = 0 ORDER BY id_kurir DESC LIMIT 1";
 
         $result = mysqli_query($connect, $query);
 
@@ -114,7 +112,7 @@ if (!isset($_SESSION["login"])) {
 
         $connect2 = mysqli_connect("localhost", "root", "", "pa2");
 
-        $query2 = "SELECT * FROM Costumer WHERE status = 0 ORDER BY id_costumer ASC LIMIT 1";
+        $query2 = "SELECT * FROM Costumer WHERE status = 0 ORDER BY id_costumer DESC LIMIT 1";
 
         $result2 = mysqli_query($connect2, $query2);
 

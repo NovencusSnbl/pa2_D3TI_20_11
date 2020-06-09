@@ -88,7 +88,8 @@ public class RegisterActivity extends AppCompatActivity {
                 if (response.equals("Succesfully registered!")){
                     progressDialog.dismiss();
                     Toast.makeText(RegisterActivity.this,response,Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                    Intent regis = new Intent(RegisterActivity.this,LoginActivity.class);
+                    startActivity(regis);
                     finish();
                 }
 

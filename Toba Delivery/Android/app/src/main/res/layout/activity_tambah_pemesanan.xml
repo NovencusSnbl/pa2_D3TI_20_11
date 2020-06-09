@@ -30,6 +30,18 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Masukkan ID anda "
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/username2"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="ID Produk"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
@@ -75,6 +87,17 @@
             android:layout_marginTop="10dp"
             android:id="@+id/pesan"
 
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Daftar Pemesanan"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:id="@+id/pemesanan"
             />
     </LinearLayout>
 </RelativeLayout>

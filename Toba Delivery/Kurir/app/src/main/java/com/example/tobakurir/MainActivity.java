@@ -58,15 +58,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void openAutoPlace(View view) {
-        startActivity(new Intent(this, PlaceAutoCompleteActivity.class));
+
+    public void DaftarPesanan(View view) {
+        startActivity(new Intent(this, TampilSemuaPemesanan.class));
     }
 
-    public void openDirectionMap(View view) {
-        startActivity(new Intent(this, DirectionActivity.class));
-    }
-
-    public void openOjek(View view) {
-        startActivity(new Intent(this, OjekActivity.class));
+    public void DaftarProduk(View view) {
+        startActivity(new Intent(this, DaftarProduk.class));
     }
 }

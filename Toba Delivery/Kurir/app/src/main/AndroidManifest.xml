@@ -17,7 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OjekActivity"/>
+        <activity android:name=".DaftarProduk"></activity>
+        <activity android:name=".ListView" />
+        <activity android:name=".TampilPesanan" />
+        <activity android:name=".TampilSemuaPemesanan" />
+        <activity android:name=".OjekActivity" />
         <activity android:name=".DirectionActivity" />
         <activity android:name=".PlaceAutoCompleteActivity" />
         <activity android:name=".MainActivity" />
