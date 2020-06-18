@@ -14,7 +14,7 @@
 	require_once('koneksi.php');
 	
 	//Membuat SQL Query dengan pegawai yang ditentukan secara spesifik sesuai ID
-	$sql = "SELECT * FROM pemesanan WHERE idpemesanan=$id";
+	$sql = "SELECT * FROM pemesanan WHERE idpemesanan=$id and status=0 or status =3";
 	
 	//Mendapatkan Hasil 
 	$r = mysqli_query($con,$sql);
@@ -27,7 +27,7 @@
 			"asal"=>$row['asal'],
 			"tujuan"=>$row['tujuan'],
 			"idproduk"=>$row['idproduk'],
-			"idcostumer"=>$row["idcostumer"]
+			"idcostumer"=>$row['idcostumer']
 		));
  
 	//Menampilkan dalam format JSON

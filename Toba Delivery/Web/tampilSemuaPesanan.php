@@ -11,7 +11,7 @@
 	require_once('koneksi.php');
 	
 	//Membuat SQL Query
-	$sql = "select idpemesanan,asal,tujuan,idproduk,idcostumer FROM pemesanan ";
+	$sql = "SELECT * FROM pemesanan where status = 0 or status=3";
 	
 	//Mendapatkan Hasil
 	$r = mysqli_query($con,$sql);
@@ -30,6 +30,8 @@
 			"idcostumer"=>$row['idcostumer']
 		));
 	}
+
+
 	
 	//Menampilkan Array dalam Format JSON
 	echo json_encode(array('result'=>$result));

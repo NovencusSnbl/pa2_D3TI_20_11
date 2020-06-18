@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,10 +27,10 @@ import java.util.HashMap;
 
 public class TampilPemesanan extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText editTextId;
-    private EditText editTextAsal;
-    private EditText editTextTujuan;
-    private EditText editTextProduk;
+    private TextView editTextId;
+    private TextView editTextAsal;
+    private TextView editTextTujuan;
+    private TextView editTextProduk;
 
     private Button buttonUpdate;
     private Button buttonDelete;
@@ -44,10 +45,10 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
 
         id = intent.getStringExtra(konfigurasi.PEMESANAN_ID);
 
-        editTextId = (EditText) findViewById(R.id.editTextId);
-        editTextAsal = (EditText) findViewById(R.id.editTextAsal);
-        editTextTujuan = (EditText) findViewById(R.id.editTextTujuan);
-        editTextProduk = (EditText) findViewById(R.id.editTextIDProduk);
+        editTextId = (TextView) findViewById(R.id.editTextId);
+        editTextAsal = (TextView) findViewById(R.id.editTextAsal);
+        editTextTujuan = (TextView) findViewById(R.id.editTextTujuan);
+        editTextProduk = (TextView) findViewById(R.id.editTextIDProduk);
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
         buttonDelete = (Button) findViewById(R.id.buttonDelete);

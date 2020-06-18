@@ -54,7 +54,6 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
         editTextPemesan = (TextView) findViewById(R.id.editTextIDPemesan);
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
-        daftarproduk = (Button) findViewById(R.id.produk);
 
 
 
@@ -126,7 +125,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(TampilPesanan.this,"Updating...","Wait...",false,false);
+                loading = ProgressDialog.show(TampilPesanan.this,"Memproses...","Wait...",false,false);
             }
 
             @Override
@@ -156,64 +155,13 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
         ue.execute();
     }
 
-    private void deleteEmployee(){
-        class DeleteEmployee extends AsyncTask<Void,Void,String> {
-            ProgressDialog loading;
 
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-                loading = ProgressDialog.show(TampilPesanan.this, "Updating...", "Tunggu...", false, false);
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-                loading.dismiss();
-                Toast.makeText(TampilPesanan.this, s, Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            protected String doInBackground(Void... params) {
-                RequestHandler rh = new RequestHandler();
-                String s = rh.sendGetRequestParam(konfigurasi.URL_DELETE_PEMESANAN, id);
-                return s;
-            }
-        }
-
-        DeleteEmployee de = new DeleteEmployee();
-        de.execute();
-    }
-
-    private void confirmDeleteEmployee(){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Apakah Kamu Yakin Ingin Menghapus Pegawai ini?");
-
-        alertDialogBuilder.setPositiveButton("Ya",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        deleteEmployee();
-                        startActivity(new Intent(TampilPesanan.this,TampilSemuaPemesanan.class));
-                    }
-                });
-
-        alertDialogBuilder.setNegativeButton("Tidak",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface arg0, int arg1) {
-
-                    }
-                });
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-    }
 
     @Override
     public void onClick(View v) {
         if(v == buttonUpdate){
             TerimaPesanan();
+
         }
 
 

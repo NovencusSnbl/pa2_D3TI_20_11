@@ -16,16 +16,26 @@
         android:layout_below="@+id/toolbar"
         >
 
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="98dp"
+            android:layout_height="78dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/logo" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@string/common_google_play_services_updating_text"
             android:text="Lakukan Pemesanan"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
-            />
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"

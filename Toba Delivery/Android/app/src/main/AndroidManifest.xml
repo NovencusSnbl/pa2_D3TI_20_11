@@ -13,15 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListView"></activity>
+        <activity android:name=".ListViewPembayaran"/>
+        <activity android:name=".ListPembayaran" />
+        <activity android:name=".ActivityPembayaran" />
+        <activity android:name=".ListView" />
         <activity android:name=".TampilPemesanan" />
-        <activity android:name=".DaftarPemesanan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".DaftarPemesanan"/>
         <activity android:name=".TambahPemesanan" />
 
         <meta-data

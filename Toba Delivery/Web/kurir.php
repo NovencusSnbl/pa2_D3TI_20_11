@@ -73,7 +73,7 @@ src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js
  <br>
  <p><a class="btn btn-primary btn-lg" href="registerKurir.php"
 role="button">Daftar Sekarang &raquo;</a> <a class="btn btnprimary
-btn-lg" href="#" role="button" style="color: white">Tinjau Sekarang
+btn-lg" href="saran.php" role="button" style="color: white">Saran dan Masukan
 &raquo;</a></p> 
 </div>
 </div>

@@ -306,4 +306,19 @@ function nonaktifKurir($data){
  	return mysqli_affected_rows($conn);
 }
 
+function tambahSaran($data){
+	global $conn;	
+
+  // Hasil: 20-01-2017 05:32:15
+ $email=htmlspecialchars($data["email"]);
+ $nama=htmlspecialchars($data["nama"]);
+ $deskripsi=htmlspecialchars($data["deskripsi"]);
+
+	$query="INSERT INTO saran VALUES('','$email','$nama','$deskripsi')";
+	mysqli_query($conn,$query);
+
+	return mysqli_affected_rows($conn);
+ 
+}
+
 ?>	

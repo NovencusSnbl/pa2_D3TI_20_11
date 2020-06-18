@@ -11,39 +11,34 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 
 public class MainActivity extends AppCompatActivity {
-    Button logout;
+    Button logout,arah;
+    TextView Pengguna;
+    String email;
+    String KEY_NAMA = "email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Here, thisActivity is the current activity
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            // Permission is not granted
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)) {
-                Toast.makeText(this, "Membutuhkan Izin Lokasi", Toast.LENGTH_SHORT).show();
-            } else {
-
-                // No explanation needed; request the permission
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
-                        1);
+        // Here, thisActivity is the current activity q
+//        Pengguna = (TextView) findViewById(R.id.pengguna);
+//        Bundle extra = getIntent().getExtras();
+//        email = extra.getString(KEY_NAMA);
+//        Pengguna.setText("Selamat datang "+email);
+        arah = findViewById(R.id.arah);
+        arah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MainMaps.class));
             }
-        } else {
-            // Permission has already been granted
-            Toast.makeText(this, "Izin Lokasi diberikan", Toast.LENGTH_SHORT).show();
-        }
-
+        });
         final SharedPreferences sharedPreferences = getSharedPreferences("UserInfo",MODE_PRIVATE);
 
         logout = findViewById(R.id.logout);
@@ -66,4 +61,11 @@ public class MainActivity extends AppCompatActivity {
     public void DaftarProduk(View view) {
         startActivity(new Intent(this, DaftarProduk.class));
     }
+
+
+    public void DaftarBayar(View view) {
+        startActivity(new Intent(this, TampilSemuaPesananSampai.class));
+    }
+
+
 }

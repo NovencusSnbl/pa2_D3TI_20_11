@@ -6,12 +6,36 @@
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
     tools:context="com.example.tobakurir.TampilSemuaPemesanan">
-
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="88dp"
+        android:layout_height="81dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/common_google_play_services_updating_text"
+        android:text="Toba E-Kurir"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView" />
+        android:id="@+id/listView"
+        android:layout_marginBottom="10dp"
+        android:listSelector="#2196F3"
+        />
 
 
 </LinearLayout>

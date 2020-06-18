@@ -90,7 +90,6 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this,response,Toast.LENGTH_SHORT).show();
                     Intent regis = new Intent(RegisterActivity.this,LoginActivity.class);
                     startActivity(regis);
-                    finish();
                 }
 
                 else{
@@ -120,5 +119,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         request.setRetryPolicy(new DefaultRetryPolicy(30000,DefaultRetryPolicy.DEFAULT_MAX_RETRIES,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MySingleton.getInstance(RegisterActivity.this).addToRequeestQueue(request);
+    }
+
+    public void loginlayer(View view) {
+        Intent regis = new Intent(RegisterActivity.this,LoginActivity.class);
+        startActivity(regis);
     }
 }

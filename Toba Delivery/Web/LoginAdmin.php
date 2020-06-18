@@ -156,20 +156,20 @@ require 'function.php';
 			<div class="form-group" style="margin-bottom: 20px;">
 				<td>Username</td>
 				<td></td>
-				<td><input type="text" name="username" id="username" class="form-control" placeholder="Username"></td>
+				<td><input type="text" name="username" id="username" class="form-control" placeholder=" Username" style="width: 200px"></td>
 			</div>
 		</tr>
 		<tr>
 			<div class="form-group">
 				<td>Password&nbsp&nbsp&nbsp&nbsp</td>
 				<td></td>
-				<td><input type="password" name="password" id="pasword" class="form-control" placeholder="password" autocomplete="off" style="margin-top: 20px;" required></td>
+				<td><input type="password" name="password" id="pasword" class="form-control" placeholder=" password" autocomplete="off" style="margin-top: 20px;width: 200px" required></td>
 			</div><br
 		</tr>
 		<tr>
 			<td></td>
 			<td></td>
-			<td><button type="submit" name="login" class="btn btn-primary btn-block btn-lg" placeholder="Password" autocomplete="off" style="margin-top: 20px;color: white;background-color: #4169E1">Login</button></td>
+			<td><button type="submit" name="login" class="btn btn-primary btn-block btn-lg" placeholder="Password" autocomplete="off" style="margin-top: 20px;color: white;background-color: #4169E1;height: 30px">Login</button></td>
 		</tr>
 	</table>
 	</form>

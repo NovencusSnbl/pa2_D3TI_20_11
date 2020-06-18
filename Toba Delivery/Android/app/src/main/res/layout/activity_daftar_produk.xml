@@ -16,12 +16,35 @@
         android:background="#f1f1f1"
         android:padding="12dp"
         tools:context=".MainActivity">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/logo"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@string/common_google_play_services_updating_text"
+            android:text="Toba Delivery"
+            android:textAlignment="center"
+            android:id="@+id/title"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_below="@id/logo"/>
         <android.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/search_view"
             android:focusable="false"
-            android:focusableInTouchMode="false">
+            android:focusableInTouchMode="false"
+            android:layout_below="@id/title">
         </android.widget.SearchView>
         <ProgressBar
             android:id="@+id/progress_bar"

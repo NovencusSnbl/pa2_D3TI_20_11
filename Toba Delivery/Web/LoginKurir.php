@@ -1,10 +1,12 @@
 <?php
+	
 	include 'koneksi.php';
 	$email = $_POST["email"];
 	$password = $_POST["password"];
 
-	// $email = "nvs@gmail.com";
-	// $password = "1234567";
+
+	// $email = "s@gmail.com";
+	// $password = "suka2saya";
 	$isValidEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
 	if ($con) {
 		if ($isValidEmail === 0) {
@@ -15,22 +17,27 @@
 			$usernameQuery = mysqli_query($con,$sqlCheckEmail); 
 			if(mysqli_num_rows($usernameQuery)>0){
 
-				$sqlLoginStatus = "SELECT * FROM kurir WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1";
+				$sqlLoginStatus = "SELECT * FROM kurir WHERE email = '$email' AND PASSWORD='$password'";
 				$loginStatusQuery = mysqli_query($con,$sqlLoginStatus);
 				if (mysqli_num_rows($loginStatusQuery)>0) {
 					$sqlLogin = "SELECT * FROM kurir WHERE email = '$email' AND PASSWORD='$password' AND STATUS = 1";
 					$loginQuery = mysqli_query($con,$sqlLogin);
+					$login = mysqli_fetch_assoc($loginQuery);
 
+					
 					if (mysqli_num_rows($loginQuery)>0) {
-						echo "Loggin Success";
 						
+						$_SESSION['idkurir'] =  $login['id_kurir'];
+						// $_SESSION['logged_email']=$email;
+						echo "Loggin Success"	;
+
 					}
 					else{
-						echo "Wrong password";
+						echo "akun belum disetujui";
 					}
 				}
 				else{
-					echo "akun belum disetujui";
+					echo "Wrong password";
 				}
 			}
 			else{

@@ -17,15 +17,26 @@
 		require_once('koneksi.php');
 		
 		//Membuat SQL Query
-		$sql = "UPDATE pemesanan SET asal = '$asal', tujuan = '$tujuan', idproduk = '$idproduk', status = 0  WHERE idpemesanan = $id;";
+		$query = "SELECT status FROM pemesanan WHERE idpemesanan=$id LIMIT 1";
+
+        $result = mysqli_query($con, $query);
+        $row = mysqli_fetch_array($result);
+ 		
+ 		$status = $row['status'];
+ 		
+ 		if ($status == 3) {
+ 			echo "Pesanan sudah dibatalkan, tidak dapat dilanjutkan!";
+ 		}
+ 		else{
+		$sql = "UPDATE pemesanan SET status = 3  WHERE idpemesanan = $id";
 		
 		//Meng-update Database 
 		if(mysqli_query($con,$sql)){
-			echo 'Berhasil Update Data Pegawai';
+			echo 'Berhasil Membatalkan';
 		}else{
-			echo 'Gagal Update Data Pegawai';
+			echo 'Gagal Membatalkan';
 		}
-		
+		}
 		mysqli_close($con);
 	}
 ?>

@@ -65,4 +65,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(produk);
     }
 
+    public void bayar(View view) {
+        Intent produk = new Intent(MainActivity.this,ListPembayaran.class);
+        startActivity(produk);
+    }
 }

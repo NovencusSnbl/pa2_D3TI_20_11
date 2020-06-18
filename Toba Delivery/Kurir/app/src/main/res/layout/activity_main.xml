@@ -1,29 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:visibility="visible"
+    >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="83dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@string/common_google_play_services_updating_text"
+        android:text="Toba E-Kurir"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+
 
     <Button
+        android:id="@+id/daftarpesanan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:drawableLeft="@drawable/ic_tablet_android_black_24dp"
         android:onClick="DaftarPesanan"
-        android:text="Daftar Pesanan"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="DaftarProduk"
-        android:text="Daftar Produk"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:text="Daftar Pesanan"
         android:textAllCaps="false"
-        android:text="Logout"
-        android:background="@color/colorPrimaryDark"
         android:textColor="#fff"
-        android:layout_marginTop="10dp"
-        android:id="@+id/logout"
-        android:layout_margin="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"
         />
 
+    <Button
+        android:id="@+id/daftarproduk"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:drawableLeft="@drawable/ic_store_mall_directory_black_24dp"
+        android:onClick="DaftarProduk"
+        android:text="Daftar Produk"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="#2196F3"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"/>
+
+    <Button
+
+        android:id="@+id/daftarpembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toLeftOf="@id/daftarproduk"
+        android:drawableLeft="@drawable/ic_credit_card_black_24dp"
+        android:onClick="DaftarBayar"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:text="Daftar Pembayaran"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="#4CAF50"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"/>
+
+    <Button
+
+        android:id="@+id/arah"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:drawableLeft="@drawable/ic_motorcycle_black_24dp"
+        android:onClick="tampilkanrute"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:text="Penunjuk Arah"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="#FF5722"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#B83A3A"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:drawableLeft="@drawable/ic_power_settings_new_black_24dp"/>
+
+
 </LinearLayout>
+</ScrollView>
