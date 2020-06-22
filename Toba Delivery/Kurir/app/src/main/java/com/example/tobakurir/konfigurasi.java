@@ -28,6 +28,7 @@ public class    konfigurasi {
     public static final String TAG_TUJUAN = "tujuan";
     public static final String TAG_IDPRODUK = "idproduk";
     public static final String TAG_IDCOSTUMER = "idcostumer";
+    public static final String TAG_USERNAME= "username";
     public static final String TAG_IDKURIR = "idkurir";
 
     //ID karyawan

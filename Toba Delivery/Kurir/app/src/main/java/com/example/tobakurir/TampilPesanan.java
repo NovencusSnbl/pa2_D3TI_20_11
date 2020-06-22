@@ -102,7 +102,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
             String asal = c.getString(konfigurasi.TAG_ASAL);
             String tujuan = c.getString(konfigurasi.TAG_TUJUAN);
             String produk = c.getString(konfigurasi.TAG_IDPRODUK);
-            String pemesan = c.getString(konfigurasi.TAG_IDCOSTUMER);
+            String pemesan = c.getString(konfigurasi.TAG_USERNAME);
 
             editTextAsal.setText(asal);
             editTextTujuan.setText(tujuan);

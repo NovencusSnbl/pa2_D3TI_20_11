@@ -100,7 +100,7 @@ public class TampilPemesananSampai extends AppCompatActivity implements View.OnC
             String asal2 = c.getString(konfigurasi.TAG_ASAL);
             String tujuan2 = c.getString(konfigurasi.TAG_TUJUAN);
             String produk2 = c.getString(konfigurasi.TAG_IDPRODUK);
-            String pemesan2 = c.getString(konfigurasi.TAG_IDCOSTUMER);
+            String pemesan2 = c.getString(konfigurasi.TAG_USERNAME);
 
             TextViewAsal2.setText(asal2);
             TextViewTujuan2.setText(tujuan2);

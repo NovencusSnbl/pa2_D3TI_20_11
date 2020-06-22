@@ -21,12 +21,27 @@
         android:fontFamily="@string/common_google_play_services_updating_text"
         android:text="Toba E-Kurir"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pemesan"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextIDPemesan"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,19 +98,7 @@
         android:layout_marginBottom="20dp"
         android:textSize="20dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ID Pemesan"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextIDPemesan"
-        android:layout_marginBottom="20dp"
-        android:textSize="20dp"/>
 
     <Button
         android:layout_width="match_parent"

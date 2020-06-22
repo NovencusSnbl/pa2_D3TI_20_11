@@ -14,8 +14,8 @@
 	require_once('koneksi.php');
 	
 	//Membuat SQL Query dengan pegawai yang ditentukan secara spesifik sesuai ID
-	$sql = "SELECT * FROM pemesanan WHERE idpemesanan=$id and status=0 or status =3";
-	
+	$sql = "SELECT costumer.username,pemesanan.* FROM pemesanan INNER JOIN costumer ON pemesanan.idcostumer = costumer.id_costumer WHERE idpemesanan=$id  AND pemesanan.status=0 OR pemesanan.status =3";
+			
 	//Mendapatkan Hasil 
 	$r = mysqli_query($con,$sql);
 	
@@ -23,6 +23,7 @@
 	$result = array();
 	$row = mysqli_fetch_array($r);
 	array_push($result,array(
+			"username"=>$row['username'],
 			"idpemesanan"=>$row['idpemesanan'],
 			"asal"=>$row['asal'],
 			"tujuan"=>$row['tujuan'],

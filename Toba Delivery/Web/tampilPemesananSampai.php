@@ -9,12 +9,12 @@
 	
 	//Mendapatkan Nilai Dari Variable ID Pegawai yang ingin ditampilkan
 	$id = $_GET['idpemesanan'];
-	
+			
 	//Importing database
 	require_once('koneksi.php');
 	
 	//Membuat SQL Query dengan pegawai yang ditentukan secara spesifik sesuai ID
-	$sql = "SELECT c.harga,p.* FROM produk c,pemesanan p WHERE idpemesanan=$id";
+	$sql = "SELECT d.username,c.harga,p.* FROM pemesanan p INNER JOIN produk c ON c.id_produk = p.idproduk INNER JOIN costumer d ON p.idcostumer = d.id_costumer WHERE idpemesanan=$id";
 	
 	//Mendapatkan Hasil 
 	$r = mysqli_query($con,$sql);
@@ -23,6 +23,7 @@
 	$result = array();
 	$row = mysqli_fetch_array($r);
 	array_push($result,array(
+			"username"=>$row['username'],
 			"harga"=>$row['harga'],
 			"idpemesanan"=>$row['idpemesanan'],
 			"asal"=>$row['asal'],

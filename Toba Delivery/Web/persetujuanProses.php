@@ -38,7 +38,7 @@ if (approve($idcostumer)>0) {
 		$mail->isHTML(true);                                  // Set email format to HTML
 
 		$mail->Subject = 'Pengaktifan Akun Pengguna';
-		$mail->Body    = 'Selamat '.$row['email'].' anda berhasil mendaftar. Gunakan id: '.$row['id_costumer'].' untuk memesan produk!';
+		$mail->Body    = 'Selamat '.$row['email'].' anda berhasil mendaftar. Gunakan id : '.$row['id_costumer'].' untuk memesan produk';
 		$mail->AltBody = 'Semoga Sukses terus ya :)';
 
 		if(!$mail->send()) {
