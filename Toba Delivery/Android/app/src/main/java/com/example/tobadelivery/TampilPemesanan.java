@@ -32,6 +32,8 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
     private TextView editTextTujuan;
     private TextView editTextProduk;
 
+    private TextView textViewNamaKurir;
+
     private Button buttonUpdate;
     private Button buttonDelete;
 
@@ -49,6 +51,7 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
         editTextAsal = (TextView) findViewById(R.id.editTextAsal);
         editTextTujuan = (TextView) findViewById(R.id.editTextTujuan);
         editTextProduk = (TextView) findViewById(R.id.editTextIDProduk);
+        textViewNamaKurir = (TextView) findViewById(R.id.editTextNamaKurir);
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
         buttonDelete = (Button) findViewById(R.id.buttonDelete);
@@ -58,11 +61,11 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
 
         editTextId.setText(id);
 
-        getEmployee();
+        getPesanan();
     }
 
-    private void getEmployee(){
-        class GetEmployee extends AsyncTask<Void,Void,String>{
+    private void getPesanan(){
+        class getPesanan extends AsyncTask<Void,Void,String>{
             ProgressDialog loading;
             @Override
             protected void onPreExecute() {
@@ -84,7 +87,7 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
                 return s;
             }
         }
-        GetEmployee ge = new GetEmployee();
+        getPesanan ge = new getPesanan();
         ge.execute();
     }
 
@@ -96,10 +99,12 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
             String asal = c.getString(konfigurasi.TAG_ASAL);
             String tujuan = c.getString(konfigurasi.TAG_TUJUAN);
             String produk = c.getString(konfigurasi.TAG_IDPRODUK);
+            String nama = c.getString(konfigurasi.TAG_NAMAKURIR);
 
             editTextAsal.setText(asal);
             editTextTujuan.setText(tujuan);
             editTextProduk.setText(produk);
+            textViewNamaKurir.setText(nama);
 
         } catch (JSONException e) {
             e.printStackTrace();

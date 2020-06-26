@@ -11,7 +11,7 @@
 	require_once('koneksi.php');
 	
 	//Membuat SQL Query
-	$sql = "SELECT * FROM pemesanan where status = 1";
+	$sql = "SELECT * FROM pemesanan where status = 0";
 	
 	//Mendapatkan Hasil
 	$r = mysqli_query($con,$sql);

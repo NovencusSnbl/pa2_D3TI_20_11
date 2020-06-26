@@ -7,6 +7,8 @@ public class konfigurasi {
     //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
     public static final String URL_ADD="http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tambahPgw.php";
     public static final String URL_GET_ALL = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tampilSemuaPemesananYangMungkinBatal.php";
+
+    public static final String URL_GET_ALL_PEMESANAN = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tampilSemuaPesanan.php";
     public static final String URL_GET_ALL_PEMBAYARAN = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tampilSemuaPembayaran.php";
     public static final String URL_GET_PEMESANAN = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tampilPemesanan.php?idpemesanan=";
     public static final String URL_GET_PEMBAYARAN = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tampilPembayaran.php?idpemesanan=";
@@ -20,6 +22,7 @@ public class konfigurasi {
     public static final String KEY_PEMESANAN_TUJUAN = "tujuan"; //desg itu variabel untuk posisi
     public static final String KEY_PEMESANAN_IDPRODUK = "idproduk"; //salary itu variabel untuk gajih
     public static final String KEY_PEMESANAN_HARGA = "pembayaran"; //salary itu variabel untuk gajih
+    public static final String KEY_PEMESANAN_NAMAKURIR = "nama";
 
     //JSON Tags
     public static final String TAG_JSON_ARRAY="result";
@@ -28,6 +31,7 @@ public class konfigurasi {
     public static final String TAG_TUJUAN = "tujuan";
     public static final String TAG_IDPRODUK = "idproduk";
     public static final String TAG_HARGA = "pembayaran";
+    public static final String TAG_NAMAKURIR = "nama";
 
     //ID karyawan
     //emp itu singkatan dari Employee

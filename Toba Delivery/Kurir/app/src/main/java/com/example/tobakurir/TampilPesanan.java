@@ -33,6 +33,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
     private TextView editTextTujuan;
     private TextView editTextProduk;
     private TextView editTextPemesan;
+    private EditText editTextIDKurir;
 
     private Button buttonUpdate;
     private Button daftarproduk;
@@ -52,6 +53,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
         editTextTujuan = (TextView) findViewById(R.id.editTextTujuan);
         editTextProduk = (TextView) findViewById(R.id.editTextIDProduk);
         editTextPemesan = (TextView) findViewById(R.id.editTextIDPemesan);
+        editTextIDKurir = (EditText) findViewById(R.id.editTextIDKurir);
 
         buttonUpdate = (Button) findViewById(R.id.buttonUpdate);
 
@@ -68,7 +70,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
     }
 
     private void getPesanan(){
-        class GetEmployee extends AsyncTask<Void,Void,String>{
+        class GetPesanan extends AsyncTask<Void,Void,String>{
             ProgressDialog loading;
             @Override
             protected void onPreExecute() {
@@ -90,7 +92,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
                 return s;
             }
         }
-        GetEmployee ge = new GetEmployee();
+        GetPesanan ge = new GetPesanan();
         ge.execute();
     }
 
@@ -103,6 +105,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
             String tujuan = c.getString(konfigurasi.TAG_TUJUAN);
             String produk = c.getString(konfigurasi.TAG_IDPRODUK);
             String pemesan = c.getString(konfigurasi.TAG_USERNAME);
+
 
             editTextAsal.setText(asal);
             editTextTujuan.setText(tujuan);
@@ -119,6 +122,7 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
         final String name = editTextAsal.getText().toString().trim();
         final String desg = editTextTujuan.getText().toString().trim();
         final String salary = editTextProduk.getText().toString().trim();
+        final String idkurir = editTextIDKurir.getText().toString().trim();
 
         class UpdateEmployee extends AsyncTask<Void,Void,String>{
             ProgressDialog loading;
@@ -142,6 +146,8 @@ public class TampilPesanan extends AppCompatActivity implements View.OnClickList
                 hashMap.put(konfigurasi.KEY_PEMESANN_ASAL,name);
                 hashMap.put(konfigurasi.KEY_PEMESANAN_TUJUAN,desg);
                 hashMap.put(konfigurasi.KEY_PEMESANAN_IDPRODUK,salary);
+                hashMap.put(konfigurasi.KEY_PEMESANAN_IDKURIR,idkurir);
+
 
                 RequestHandler rh = new RequestHandler();
 

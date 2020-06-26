@@ -13,7 +13,7 @@
 		$asal = $_POST['asal'];
 		$tujuan = $_POST['tujuan'];
 		$idproduk = $_POST['idproduk'];
-		
+		$idkurir = $_POST['idkurir'];
 		
 		//import file koneksi database 
 		require_once('koneksi.php');
@@ -30,14 +30,24 @@
  		if ($status == 3) {
  			echo "Maaf, Pesanan sudah dibatalkan, tidak dapat dilanjutkan!";
  		}
+
  		else{
-		$sql = "UPDATE pemesanan SET status = 1 WHERE idpemesanan = '$id'";
-		
-		//Meng-update Database 
-		if(mysqli_query($con,$sql)){
-			echo 'Berhasil Menerima';
-		}else{
-			echo 'Gagal Menerima';
+ 			$idkurirselect = "SELECT id_kurir from kurir where id_kurir LIKE '$idkurir'";
+		 	$kurirQuery = mysqli_query($con,$idkurirselect); 
+
+		 	if (mysqli_num_rows($kurirQuery) > 0) { 
+
+			$sql = "UPDATE pemesanan SET status = 1,idkurir='$idkurir' WHERE idpemesanan = '$id'";
+			
+			//Meng-update Database 
+			if(mysqli_query($con,$sql)){
+				echo 'Berhasil Menerima';
+			}else{
+				echo 'Gagal Menerima';
+			}
+		}
+		else{
+			echo "bukan id anda!";
 		}
 		}
 		mysqli_close($con);

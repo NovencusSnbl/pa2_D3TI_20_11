@@ -24,6 +24,23 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20dp"
         android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Kurir"
+        android:textColor="#4CAF50"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNamaKurir"
+        android:textColor="#4CAF50"
+        android:layout_marginBottom="20dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

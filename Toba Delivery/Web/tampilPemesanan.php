@@ -14,7 +14,7 @@
 	require_once('koneksi.php');
 	
 	//Membuat SQL Query dengan pegawai yang ditentukan secara spesifik sesuai ID
-	$sql = "SELECT * FROM pemesanan WHERE idpemesanan=$id";
+	$sql = "SELECT kurir.nama,pemesanan.* FROM pemesanan INNER JOIN kurir ON pemesanan.idkurir = kurir.id_kurir WHERE idpemesanan=$id ";
 	
 	//Mendapatkan Hasil 
 	$r = mysqli_query($con,$sql);
@@ -23,6 +23,8 @@
 	$result = array();
 	$row = mysqli_fetch_array($r);
 	array_push($result,array(
+
+			"nama"=>$row['nama'],
 			"idpemesanan"=>$row['idpemesanan'],
 			"asal"=>$row['asal'],
 			"tujuan"=>$row['tujuan'],

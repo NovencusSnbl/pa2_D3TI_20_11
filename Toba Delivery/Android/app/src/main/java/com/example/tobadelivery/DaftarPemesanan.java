@@ -97,7 +97,7 @@ public class DaftarPemesanan extends AppCompatActivity implements ListView.OnIte
             @Override
             protected String doInBackground(Void... params) {
                 RequestHandler rh = new RequestHandler();
-                String s = rh.sendGetRequest(konfigurasi.URL_GET_ALL);
+                String s = rh.sendGetRequest(konfigurasi.URL_GET_ALL_PEMESANAN);
                 return s;
             }
         }
