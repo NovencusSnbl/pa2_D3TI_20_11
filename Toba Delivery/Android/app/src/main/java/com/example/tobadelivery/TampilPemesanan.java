@@ -112,10 +112,12 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
     }
 
 
-    private void updateEmployee(){
+    private void BatalkanPesanan(){
         final String name = editTextAsal.getText().toString().trim();
         final String desg = editTextTujuan.getText().toString().trim();
         final String salary = editTextProduk.getText().toString().trim();
+        final String nama = textViewNamaKurir.getText().toString().trim();
+
 
         class UpdateEmployee extends AsyncTask<Void,Void,String>{
             ProgressDialog loading;
@@ -139,6 +141,7 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
                 hashMap.put(konfigurasi.KEY_PEMESANN_ASAL,name);
                 hashMap.put(konfigurasi.KEY_PEMESANAN_TUJUAN,desg);
                 hashMap.put(konfigurasi.KEY_PEMESANAN_IDPRODUK,salary);
+                hashMap.put(konfigurasi.KEY_PEMESANAN_NAMAKURIR,nama);
 
                 RequestHandler rh = new RequestHandler();
 
@@ -209,7 +212,7 @@ public class TampilPemesanan extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if(v == buttonUpdate){
-            updateEmployee();
+            BatalkanPesanan();
         }
 
         if(v == buttonDelete){
