@@ -7,7 +7,7 @@ public class    konfigurasi {
     public static final String URL_GET_PEMESANAN = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tampilPemesananKurir.php?idpemesanan=";
     public static final String URL_GET_PEMESANAN_SAMPAI = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/tampilPemesananSampai.php?idpemesanan=";
     public static final String URL_UPDATE_PEMESANAN= "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/updatePemesananKurir.php";
-    public static final String URL_UPDATE_PEMESANAN_SAMPAI= "htt    p://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/updatePemesananSampai.php";
+    public static final String URL_UPDATE_PEMESANAN_SAMPAI= "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/updatePemesananSampai.php";
     public static final String URL_DELETE_PEMESANAN = "http://169.254.168.218:8080/Proyek%20Akhir%202/Toba%20Delivery/Web/hapusPemesanan.php?id=";
 
     //Dibawah ini merupakan Kunci yang akan digunakan untuk mengirim permintaan ke Skrip PHP

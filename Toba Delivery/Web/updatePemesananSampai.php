@@ -46,7 +46,7 @@
 		$sql = "UPDATE pemesanan SET status = 2,pembayaran=$pembayaran  WHERE idpemesanan = $id";
 		//Meng-update Database 
 		if(mysqli_query($con,$sql)){
-			echo 'Barang sudah dinyatakan sampai';
+			echo 'Barang sampai';
 		}else{
 			echo 'Gagal sampai';
 		}
